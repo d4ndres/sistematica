@@ -1,0 +1,11 @@
+html {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+  width: 100%;
+  background: #b5b4bb;
+}
+body * {
+  background: #fff;
+}

@@ -1,2 +1,54 @@
 @import "./utilidad/*"
 @import "./base/*"
+
+.title , .semiTitle
+  margin: 0px 30px
+  padding: 10px
+.mainMenuOption
+  display: inline
+  font-size: font-nav
+
+  .dad-list
+    background: color-nav
+    margin: 0
+    .item
+      cursor: pointer
+      background: color-nav
+      display: inline-block
+      margin: 15px 10px
+      color: white
+      &::after
+        content: " ^"
+
+.buffer
+  background-image: url(url-img-prog)
+  background-size: cover
+  height: 70vh
+
+.contentBody
+  a
+    text-decoration: none
+    color: black
+    cursor: pointer
+  .secondTitle
+    font-size: font-big
+    margin: 0 0 10px 10px
+
+.containerTema
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  justify-items: center
+  .tema
+    display: inline-block
+    border: red solid 1px
+    max-width: 350px
+    max-height: 250px
+    img
+      transition: 1s
+      width: 100%
+      margin: 0
+      object-fit: cover
+    &:hover
+      img
+        transform: rotateY(180deg)
+        opacity: 0

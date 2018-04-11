@@ -7,46 +7,78 @@
   </head>
   <body>
     <section>
-      <h1 class="title"><strong>Sistematica</strong></h1>
-      <nav class="mainMenuOption">
-        <ul class="dad-list">
-          <li class="item">
-            Sistemas
-          </li>
-          <li class="item">
-            Matemáticas
-          </li>
-          <li class="item">
-            Estadística
-          </li>
-          <li class="item">
-            Referencias
-          </li>
-        </ul>
-      </nav>
-      <article class="buffer">
-        mover imagens index z
-      </article>
+      <div id="firstBlock" class="firstBlock">
+        <div id="containerHeader" class="containerHeader">
+          <header id="header" class="header">
+          <h1 class="containerMainTitle">
+            <a href="#firstBlock"><strong id="mainTitle" class="mainTitle">Sistematica</strong></a>
+          </h1>
+          <nav class="mainMenuOption">
+            <ul class="dad-list">
+              <li class="item">
+                Sistemas
+              </li>
+              <li class="item">
+                Matemáticas
+              </li>
+              <li class="item">
+                Estadística
+              </li>
+              <li class="item">
+                Referencias
+              </li>
+            </ul>
+          </nav>
+          </header>
+        </div>
+        <article class="buffer">
+          <div class="containerNews">
+            <div class="column alertas">
+              alertas
+            </div>
+            <div class="column titleNews">
+              titulo noticias
+            </div>
+            <div class="column news">
+              noticias
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
     <section id="contentBody" class="contentBody">
-      <h2  class="secondTitle"><a href="#contentBody">De interes</a></h2>
+      <h2  class="secondTitle"><a class="linkSelf" href="#contentBody">Blog</a></h2>
       <div class="containerTema">
         <figure class="tema">
-          <figcaption>Sistemas</figcaption>
           <img src="./image/programming.jpg" alt="piture-programming" />
+          <figcaption class="titleImage">Sistemas</figcaption>
+          <figcaption class="descriptionImage">
+            <div class="subHead">head</div>
+            <div class="subBody">body</div>
+          </figcaption>
         </figure>
         <figure class="tema">
-          <figcaption>Matemáticas</figcaption>
           <img src="./image/maths.jpg" alt="piture-maths" />
+          <figcaption class="titleImage">Matemáticas</figcaption>
+          <figcaption class="descriptionImage">
+            <div class="subHead">head</div>
+            <div class="subBody">body</div>
+          </figcaption>
         </figure>
         <figure class="tema">
-          <figcaption>Estadística</figcaption>
           <img src="./image/statistics.jpg" alt="piture-statistics" />
+          <figcaption class="titleImage">Estadística</figcaption>
+          <figcaption class="descriptionImage">
+            <div class="subHead">head</div>
+            <div class="subBody">body</div>
+          </figcaption>
         </figure>
       </div>
     </section>
-    <footer>
+    <footer class="footer">
       sobre
     </footer>
+    <script src="./scripts/events.js">
+    </script>
   </body>
 </html>

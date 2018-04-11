@@ -1,77 +1,190 @@
-html {
-  font-family: sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Sanchez|Homemade+Apple");
+.html {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Sanchez', serif;
   font-size: 16px;
 }
 body {
-  margin: 0;
   width: 100%;
-  background: #b5b4bb;
+  height: 100vh;
+  margin: 0;
+  margin: auto;
+  position: relative;
+  z-index: 0;
 }
-body .title {
-  font-size: 50px;
+section {
+  min-height: 40vh;
 }
-body * {
-  background: #fff;
+footer {
+  min-height: 20vh;
 }
-.title,
-.semiTitle {
-  margin: 0px 30px;
-  padding: 10px;
+.firstBlock {
+  background-image: url("../image/programming.jpg");
+  background-size: cover;
+}
+.containerHeader {
+  width: 100%;
+  position: fixed;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.backgroundScroll {
+  background: #000;
+}
+.header {
+  background: transparent;
+  position: relative;
+  height: 80px;
+}
+.containerMainTitle {
+  display: inline-block;
+  font-family: 'Sanchez';
+  font-size: 30px;
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  left: 40px;
+  top: 20px;
+}
+.containerMainTitle a {
+  text-decoration: none;
+  color: #fff;
 }
 .mainMenuOption {
-  display: inline;
-  font-size: 18px;
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+  top: 30px;
 }
 .mainMenuOption .dad-list {
-  background: #3a3b3d;
   margin: 0;
+  display: block;
 }
 .mainMenuOption .dad-list .item {
+  font-size: 20px;
   cursor: pointer;
-  background: #3a3b3d;
   display: inline-block;
-  margin: 15px 10px;
+  margin-top: 0;
+  padding-left: 50px;
   color: #fff;
 }
 .mainMenuOption .dad-list .item::after {
-  content: " ^";
+  content: "V";
 }
 .buffer {
-  background-image: url("../image/programming.jpg");
-  background-size: cover;
-  height: 70vh;
+  height: 65vh;
+  padding-top: 80px;
 }
-.contentBody a {
+.buffer .containerNews {
+  color: #000;
+  border: #000 solid 1px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-areas: "alertas titleNews titleNews " "alertas news news" "alertas news news" "alertas news news";
+}
+.buffer .containerNews .alertas {
+  grid-area: alertas;
+}
+.buffer .containerNews .titleNews {
+  grid-area: titleNews;
+}
+.buffer .containerNews .news {
+  grid-area: news;
+}
+.buffer .containerNews .column {
+  background: rgba(255,255,255,0.5);
+  height: 100%;
+}
+.contentBody .secondTitle {
+  position: relative;
+  left: 40px;
+  font-family: 'Sanchez';
+  font-size: 24px;
+}
+.contentBody .linkSelf {
   text-decoration: none;
   color: #000;
   cursor: pointer;
 }
-.contentBody .secondTitle {
-  font-size: 36px;
-  margin: 0 0 10px 10px;
-}
 .containerTema {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
 .containerTema .tema {
   display: inline-block;
-  border: #f00 solid 1px;
-  max-width: 350px;
-  max-height: 250px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.containerTema .tema .titleImage {
+  font-size: 20px;
+  text-align: center;
+  border-top: #000 dashed 1px;
+  padding-bottom: 10px;
 }
 .containerTema .tema img {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  width: 100%;
-  margin: 0;
+  border-radius: 20px 0;
+  overflow: auto;
+  border: #000 solid 1px;
+  border-bottom: none;
+  -webkit-transition: 0.8s opacity, 1s -webkit-transform;
+  transition: 0.8s opacity, 1s -webkit-transform;
+  -o-transition: 0.8s opacity, 1s transform;
+  transition: 0.8s opacity, 1s transform;
+  transition: 0.8s opacity, 1s transform, 1s -webkit-transform;
+  width: 17vw;
+  height: 21.25vw;
   -o-object-fit: cover;
   object-fit: cover;
+  margin: 0;
+}
+.containerTema .tema .descriptionImage {
+  -webkit-transition: 0.8s opacity, 1s -webkit-transform;
+  transition: 0.8s opacity, 1s -webkit-transform;
+  -o-transition: 0.8s opacity, 1s transform;
+  transition: 0.8s opacity, 1s transform;
+  transition: 0.8s opacity, 1s transform, 1s -webkit-transform;
+  width: 17vw;
+  height: 21.25vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  border: #808080 outset 2px;
+  border-radius: 20px 0;
+  overflow: auto;
+  color: #f00;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  opacity: 0;
+  z-index: 0;
+  text-align: center;
 }
 .containerTema .tema:hover img {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   opacity: 0;
+  cursor: pointer;
+}
+.containerTema .tema:hover .descriptionImage {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  opacity: 1;
+  cursor: pointer;
+}
+.footer {
+  background: #000;
 }

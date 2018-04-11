@@ -1,54 +1,154 @@
-@import "./utilidad/*"
-@import "./base/*"
+@import "./_link.styl"
+@import "./_first.styl"
+@import "./_variables.styl"
+@import "./_mixinAndFunction.styl"
 
-.title , .semiTitle
-  margin: 0px 30px
-  padding: 10px
+// body *
+//   border: red solid 0.5px
+//   margin: 3px
+
+.firstBlock
+  background-image: url(../image/programming.jpg)
+  background-size: cover
+
+.containerHeader
+  width: 100%
+  position: fixed
+  transition: 0.5s
+
+.backgroundScroll
+  background: black
+
+
+.header
+  background: transparent
+  position: relative
+  height: 80px
+
+.containerMainTitle
+  // border: red solid 1px
+  display: inline-block
+  font-family: classic-font
+  font-size: 30px
+  color: white
+  margin: 0
+  position: absolute
+  left: 40px
+  top: 20px
+  a
+    text-decoration: none
+    color: white
+
 .mainMenuOption
-  display: inline
-  font-size: font-nav
-
+  // border: red solid 1px
+  display: inline-block
+  position: absolute
+  right: 40px
+  top: 30px
   .dad-list
-    background: color-nav
     margin: 0
+    display: block
     .item
+      font-size: 20px
       cursor: pointer
-      background: color-nav
       display: inline-block
-      margin: 15px 10px
+      margin-top: 0
+      padding-left: 50px
       color: white
       &::after
-        content: " ^"
+        content: "V"
 
 .buffer
-  background-image: url(url-img-prog)
-  background-size: cover
-  height: 70vh
+  height: 65vh
+  padding-top: 80px
+  .containerNews
+    color: black
+    border: black solid 1px
+    middle(80%)
+    margin-top: 20px
+    margin-bottom: 20px
+    height: 60vh
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    grid-column-gap: 5px
+    grid-row-gap: 5px
+    grid-template-areas: "alertas titleNews titleNews " "alertas news news" "alertas news news" "alertas news news"
+    .alertas
+      grid-area: alertas
+    .titleNews
+      grid-area: titleNews
+    .news
+      grid-area: news
+    .column
+      background: rgba(255,255,255,0.5)
+      height: 100%
+
+
 
 .contentBody
-  a
+  .secondTitle
+    position: relative
+    left: 40px
+    font-family: classic-font
+    font-size: 24px
+  .linkSelf
     text-decoration: none
     color: black
     cursor: pointer
-  .secondTitle
-    font-size: font-big
-    margin: 0 0 10px 10px
+
+
 
 .containerTema
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
+  grid-template-columns: repeat(3, 1fr)
   justify-items: center
   .tema
     display: inline-block
-    border: red solid 1px
-    max-width: 350px
-    max-height: 250px
+    margin: 0
+    padding: 0
+    position: relative
+
+    .titleImage
+      font-size: 20px
+      text-align: center
+      border-top: black dashed 1px
+      padding-bottom: 10px
     img
-      transition: 1s
-      width: 100%
+      border-radius: 20px 0
+      overflow: auto
+      border: black solid 1px
+      border-bottom: none
+      transition: 0.8s opacity , 1s transform
+      mixin-16-9(17vw)
       margin: 0
-      object-fit: cover
+    .descriptionImage
+      transition: 0.8s opacity , 1s transform
+      mixin-16-9(17vw)
+      position: absolute
+      top: 0
+      border: gray outset 2px
+      border-radius: 20px 0
+      overflow: auto
+      color: red
+      transform: rotateY(180deg)
+      opacity: 0
+      z-index: 0
+      text-align: center
     &:hover
       img
         transform: rotateY(180deg)
         opacity: 0
+        cursor: pointer
+    &:hover
+      .descriptionImage
+        transform: rotateY(0deg)
+        opacity: 1
+        cursor: pointer
+
+
+
+
+
+.footer
+  background: black

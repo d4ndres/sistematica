@@ -18,7 +18,7 @@
 
 .backgroundScroll
   background: black
-
+  z-index: 1
 
 .header
   background: transparent
@@ -43,7 +43,7 @@
   // border: red solid 1px
   display: inline-block
   position: absolute
-  right: 40px
+  right: 50px
   top: 30px
   .dad-list
     margin: 0
@@ -88,10 +88,11 @@
 
 .contentBody
   .secondTitle
-    position: relative
-    left: 40px
+    display: block
     font-family: classic-font
-    font-size: 24px
+    font-size: 35px
+    margin: 20px 0
+    text-align: center
   .linkSelf
     text-decoration: none
     color: black
@@ -100,20 +101,23 @@
 
 
 .containerTema
+  max-width: 80vw
+  text-align: center
+  margin: 0 auto
   display: grid
-  grid-template-columns: repeat(3, 1fr)
-  justify-items: center
+  grid-template-columns: 1fr 1fr 1fr
   .tema
     display: inline-block
     margin: 0
     padding: 0
     position: relative
-
+    margin: auto
     .titleImage
       font-size: 20px
       text-align: center
       border-top: black dashed 1px
       padding-bottom: 10px
+
     img
       border-radius: 20px 0
       overflow: auto
@@ -123,6 +127,7 @@
       mixin-16-9(17vw)
       margin: 0
     .descriptionImage
+      background: white
       transition: 0.8s opacity , 1s transform
       mixin-16-9(17vw)
       position: absolute
@@ -146,9 +151,83 @@
         opacity: 1
         cursor: pointer
 
+.descriptionImage
+  margin: auto
+  text-align: center
+
+  .subHead
+    font-family: 'Poppins', sans-serif
+    text-align: center
+    color: black
+    font-size: 17px
+  .subBody
+    font-family: 'Nanum Gothic', sans-serif
+    text-align: center
+    font-size: 11px
+    color: black
+    width: 90%
+    margin: auto
+
+
+.btn
+  margin: 20px auto
+  display: inline-block
+  border: black solid 0.5px
+  border-radius: 7px
+  padding: 3px 12px
+  background-color: #E2BE66
+
+
+
+
+
 
 
 
 
 .footer
   background: black
+  color: white
+  position: relative
+  display: block
+  text-align: center
+
+.aboutIng
+ text-align: center
+ font-size: 18px
+ display: inline-block
+ .nameIng
+   display: inline-block
+   margin: 30px auto 10px auto
+ .linkMailIng
+   text-decoration: none
+   color: white
+   display: block
+   strong
+     margin-right: 20px
+     display: inline-block
+   span
+     margin-left: 20px
+     display: inline-block
+     color: bestBlue
+
+.aboutMaker
+  display: inline-block
+  position: absolute
+  bottom: 0
+  right: 0
+  // overflow: hidden
+  .containerLinkMaker
+    position: relative
+    transition: 1s
+    .linkMaker
+      transition: 1s
+      position: relative
+      text-decoration: none
+      .maker
+        font-size: 16px
+        color: white
+        margin-right: 10px
+      .nameMaker
+        font-size: 18px
+        color: bestBlue

@@ -12,23 +12,28 @@ function listenerScroll() {
       containerHeader.classList.add("backgroundScroll")
       console.log("si hay")
       console.log(doScroll.scrollTop)
-      if(mayor < doScroll.scrollTop ){
-        mayor = doScroll.scrollTop
-      }
+
   } else {
       containerHeader.classList.remove("backgroundScroll")
       console.log("no hay")
       console.log(doScroll.scrollTop)
   }
-  if(mayor == doScroll.scrollTop){
-    linkMaker.classList.add("activeLeftZero")
-  }else {
-    linkMaker.classList.remove("activeLeftZero")
 
-  }
 
 }
 
 var bLazy = new Blazy({
     selector: 'img'
 });
+
+
+// if(mayor < doScroll.scrollTop ){
+//   mayor = doScroll.scrollTop
+// }
+// -------------------------------
+// if(mayor == doScroll.scrollTop){
+//   linkMaker.classList.add("activeLeftZero")
+// }else {
+//   linkMaker.classList.remove("activeLeftZero")
+//
+// }

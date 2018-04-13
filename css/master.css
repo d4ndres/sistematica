@@ -36,9 +36,9 @@ footer {
   z-index: 1;
 }
 .header {
-  background: transparent;
-  position: relative;
-  height: 80px;
+  right: 0;
+  top: 0;
+  height: inherit;
 }
 .containerMainTitle {
   display: inline-block;
@@ -54,32 +54,99 @@ footer {
   text-decoration: none;
   color: #fff;
 }
-.mainMenuOption {
-  display: inline-block;
-  position: absolute;
-  right: 50px;
-  top: 30px;
+/* .mainMenuOption ,.mainMenuOption *{
+  border: green solid 1px;
+
+} */
+/* <nav class="mainMenuOption">
+  <ul class="list">
+    <li class="item">sis</li>
+    <li class="item">mat</li>
+    <li class="item">est</li>
+    <li class="item">refe</li>
+  </ul>
+</nav> */
+.mainMenuOption{
+  float: right;
+
 }
-.mainMenuOption .dad-list {
-  margin: 0;
-  display: block;
+.list{
+  font-size: 0;
+  line-height: 80px;
+  padding: 0;
+  min-width: 0;
+  text-align: center;
 }
-.mainMenuOption .dad-list .item {
-  font-size: 20px;
-  cursor: pointer;
+.item{
   display: inline-block;
-  margin-top: 0;
-  padding-left: 50px;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
   color: #fff;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: pointer;
+
+  vertical-align: top;
+  line-height: 200%;
+  position: relative;
+  top: 15px;
+
+
+  text-align: left;
+  /* border-right: #fff solid 1px; */
+  border-left:  #fff solid 1px;
 }
-.mainMenuOption .dad-list .item::after {
-  content: "V";
+
+
+.item a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
 }
+.item a:hover {
+  box-shadow: 0 2px #FF930D;
+  bottom: -100%;
+}
+.subList{
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  color: black;
+  background: none;
+  font-size: 16px;
+  font-weight: 400;
+  height: 0px;
+  transition: 0.6s ;
+  border-radius: 0 0 6px 6px;
+}
+.subItem{
+  transition: 0.5s ;
+  transform: translateY(-300%);
+  background: white;
+}
+.item:hover .subList{
+  height: 300%;
+  opacity: 1;
+  z-index: 1;
+}
+.item:hover .subListEstadistica{
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+}
+.item:hover .subItem{
+  transform: translateY(0);
+}
+.subItem:hover{
+  background: #BFC0CC;
+}
+
 .buffer {
   height: 65vh;
   padding-top: 80px;
 }
-.buffer .containerNews {
+.containerNews {
   color: #000;
   border: #000 solid 1px;
   width: 80%;
@@ -95,13 +162,13 @@ footer {
   grid-row-gap: 5px;
   grid-template-areas: "alertas titleNews titleNews " "alertas news news" "alertas news news" "alertas news news";
 }
-.buffer .containerNews .alertas {
+.containerNews .alertas {
   grid-area: alertas;
 }
-.buffer .containerNews .titleNews {
+.containerNews .titleNews {
   grid-area: titleNews;
 }
-.buffer .containerNews .news {
+.containerNews .news {
   grid-area: news;
 }
 .buffer .containerNews .column {
@@ -127,20 +194,20 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.containerTema .tema {
+.tema {
   display: inline-block;
   margin: 0;
   padding: 0;
   position: relative;
   margin: auto;
 }
-.containerTema .tema .titleImage {
+.tema .titleImage {
   font-size: 20px;
   text-align: center;
   border-top: #000 dashed 1px;
   padding-bottom: 10px;
 }
-.containerTema .tema img {
+.tema img {
   border-radius: 20px 0;
   overflow: auto;
   border: #000 solid 1px;
@@ -156,7 +223,7 @@ footer {
   object-fit: cover;
   margin: 0;
 }
-.containerTema .tema .descriptionImage {
+.descriptionImage {
   background: #fff;
   -webkit-transition: 0.8s opacity, 1s -webkit-transform;
   transition: 0.8s opacity, 1s -webkit-transform;
@@ -179,13 +246,13 @@ footer {
   z-index: 0;
   text-align: center;
 }
-.containerTema .tema:hover img {
+.tema:hover img {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   opacity: 0;
   cursor: pointer;
 }
-.containerTema .tema:hover .descriptionImage {
+.tema:hover .descriptionImage {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   opacity: 1;
@@ -195,13 +262,13 @@ footer {
   margin: auto;
   text-align: center;
 }
-.descriptionImage .subHead {
+.subHead {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   color: #000;
   font-size: 17px;
 }
-.descriptionImage .subBody {
+.subBody {
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
   font-size: 11px;
@@ -229,11 +296,11 @@ footer {
   font-size: 18px;
   display: inline-block;
 }
-.aboutIng .nameIng {
+.nameIng {
   display: inline-block;
   margin: 30px auto 10px auto;
 }
-.aboutIng .linkMailIng {
+.linkMailIng {
   text-decoration: none;
   color: #fff;
   display: block;
@@ -253,25 +320,25 @@ footer {
   bottom: 0;
   right: 0;
 }
-.aboutMaker .containerLinkMaker {
+.containerLinkMaker {
   position: relative;
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
 }
-.aboutMaker .containerLinkMaker .linkMaker {
+.linkMaker {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
   position: relative;
   text-decoration: none;
 }
-.aboutMaker .containerLinkMaker .linkMaker .maker {
+.maker {
   font-size: 16px;
   color: #fff;
   margin-right: 10px;
 }
-.aboutMaker .containerLinkMaker .linkMaker .nameMaker {
+.nameMaker {
   font-size: 18px;
   color: #0e699e;
 }

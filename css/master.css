@@ -17,9 +17,10 @@ body {
   position: relative;
   z-index: 0;
 }
-/* section {
+section {
   min-height: 45vh;
-} */
+}
+
 footer {
   min-height: 10vh;
 }
@@ -149,6 +150,10 @@ footer {
 
   transition: 0.8s opacity, 0.4s transform ;
   opacity: .5;
+}
+.subSubject::before{
+  content: "» ";
+  font-weight: 400;
 }
 .subItem{
   transition: 2s;
@@ -493,7 +498,7 @@ programacion  I*/
 .trep-principalContainer{
   margin: 0 auto;
   width: 1170px;
-  background: lightgray;
+  /* background: lightgray; */
   height: 80vh;
 }
 /* medias */
@@ -525,14 +530,17 @@ programacion  I*/
 .miniItem
 */
 .trep-title1{
-
+  font-size: 2.4em;
   margin-bottom: 3vh;
-
+  color: #19223F;
+}
+.trep-title2{
+  font-size: 1.4rem;
+  color: #19223F;
 }
 .trep-column1,.trep-column2,.trep-column3{
   display: inline-block;
   position: relative;
-  margin: 0;
   font-weight: 400;
 }
 .trep-column1, .trep-column3{
@@ -547,10 +555,12 @@ programacion  I*/
   top: 0;
 
 }
-
+.trep-miniNav{
+  margin: 0 auto;
+}
 .trep-miniList{
   list-style-type: none;
-  padding: 0;
+  padding-left: 5px;
 }
 .miniItem{
   font-size: 18px;
@@ -566,23 +576,65 @@ programacion  I*/
   padding-left: 10%;
   width: 90%;
   list-style-type: none;
-  border: green solid 1px;
+  /* border: green solid 1px; */
 }
 .trep-miniNav{
   position: absolute;
   top: 0;
-  border: green solid 1px;
   width: 100%;
+  /* border: black solid 1px; */
 }
 .miniItem2{
-  padding: 20px 0;
   border: 1px solid black;
-  /* background: red; */
+  /* padding: 30px 0; */
 }
+.atomBG{
+  background: linear-gradient(#B2E299, #00A070);
+}
+.atomBGImg , .sublimeBGImg{
+  padding: 30px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 250px;
 
+}
+.atomBGImg{
+  background-image: url(../image/atom.png);
+}
+.sublimeBGImg{
+  background-color: #4B4B4B;
+  background-image: url(../image/sublime3.svg);
+}
+/*---------------------------------------------  */
+.row1RowConten{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.rowContentTitle{
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 530;
+  margin-bottom: 0.7rem;
+}
+.rowContentList{
+  list-style-type: none;
+  padding-left: 20px;
 
+}
+.rowContentItem{
+}
+.rowContentItem::before{
+  content: "○ ";
+  font-size: 14px;
 
-
-
+}
+.priority::before{
+  color: red;
+}
+/* enlace c++ https://mega.nz/#!cIBDRCTS!83Kg0i_QxXA65Z9bXSO6WlBKKJqGvxVP0nbEfs1VqF4 */
+/* top atom bg #B2E299 */
+/* bottom atom bg #00A070 */
+ /* color sublime bg #4B4B4B */
 
 /*++++++++++++++++  */

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Sistematica</title>
     <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/modales.css">
   </head>
   <body>
     <section>
@@ -66,7 +67,7 @@
                 <li class="miniItem"><a class="miniItemA" href="../index.html">Home</a></li>
                 <li class="miniItem"><a class="miniItemA" href="../recursos/Guia-programacion-2.pdf" target="_blank" >Guía</a></li>
                 <li class="miniItem"><a class="miniItemA" href="#temas">Temas</a></li>
-                <li class="miniItem"><a class="miniItemA" href="#">Ejercicios destacados</a> </li>
+                <li class="miniItem"><a class="miniItemA" href="#ejercicios">Ejercicios destacados</a> </li>
 
               </ul>
             </nav>
@@ -109,7 +110,7 @@
                     El análisis, comprensión y resolucion de los temas resaltados deben
                     ser claros para el buen resultado y entendimiento del curso.
                   </p>
-                  <span>De lo contrario precionar <a href="#">aqui</a> para conocer más.</span>
+                  <span>De lo contrario precionar <a href="./programacionI.html">aqui</a> para conocer más.</span>
                 </div>
               </div>
               <div class=" row2Content rowsContent ">
@@ -117,10 +118,11 @@
                   <strong class="rowContentTitle" >Guía</strong>
                   El siguiente material tiene conceptos y ejercicios claves para el desarrollo de algoritmos.
                   <br/>
-                  <a class=" imgGuiaContainer"href="#">
-                    <img class=" imgGuia"src="../image/imgGuiaProI.jpg" alt="img-guia-progii">
+                  <a target="_blank" class=" imgGuiaContainer" href="../recursos/Guia-programacion-2.pdf">
+                    guia de programación II
                   </a>
-                  Esta guía esta suministrada por la <a target="_blank" href="http://www.unipamplona.edu.co/">Universidad de pamplona</a>
+                  <br/>
+                  Esta guía esta suministrada por la <a target="_blank" href="http://www.unipamplona.edu.co/">Universidad de pamplona</a>.
                 </div>
                 <div class="row2RowConten 2-2RowContent">
                   <strong id="temas" class="rowContentTitle" >Temas</strong>
@@ -129,38 +131,30 @@
                     <li class="rowContentItem ">Arreglos bidimensionales o matrices</li>
                     <li class="rowContentItem ">Métodos de ordenamiento</li>
                     <li class="rowContentItem ">Métodos de búsqueda</li>
-                    <li class="rowContentItem ">Cadenas</li>
+                    <li class="rowContentItem ">Cadenas <span id="activadorModalCadenas" class="linkModal">ver</span></li>
                     <li class="rowContentItem ">Estructuras</li>
                   </ul>
                   <br>
                 </div>
               </div>
-            </div>
-          </div>
-          <div id="column3" class=" column3">
-            <strong class="rowContentTitle column3Title" >Herramientas</strong>
-            <div class="rowContentTitle column3SubTitle" >Editores de codigó</div>
-            <nav class=" miniNav miniNav2">
-              <ul class=" miniList2">
-                <li class="miniItem2 atomBG">
-                  <a target="_blank" href="https://atom.io/" class="atomBGImg BGImg">
-                  </a>
-                </li>
-                <li class="miniItem2 sublimeBG">
-                  <a target="_blank" href="https://www.sublimetext.com/" class="sublimeBGImg BGImg">
-                  </a>
-                </li>
-                <li class="miniItem2 VSCBG">
-                  <a target="_blank" href="https://code.visualstudio.com/" class="VSCBGImg BGImg">
-                  </a>
-                </li>
-                <li class="miniItem2 devCBG">
-                  <a target="_blank" href="" class="devCBGImg BGImg">
-                  </a>
-                </li>
+            <div id="ejercicios" class="row3Content rowsContent">
+              <div class="row3RowConten 3-1RowContent">
+                <strong class="rowContentTitle" >Ejercicios destacados</strong>
+              </div>
 
-              </ul>
-            </nav>
+              <div class="row3RowConten 3-2RowContent">
+                <ul class="rowContentList">
+
+                  <li class="rowContentItem ">método de ordenamiento: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Ordenamiento-Burbuja-1.pdf">burbuja </a></li>
+                  <li class="rowContentItem ">método de ordenamiento: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Ordenamiento-Seleccion.pdf">Selección </a></li>
+                  <li class="rowContentItem ">método de ordenamiento: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Ordenamiento-Insercion-1.pdf">Inserción</a></li>
+                  <li class="rowContentItem ">método de búsqueda: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/BusquedaBinaria.pdf">Binaria</a></li>
+                  <li class="rowContentItem ">método de búsqueda: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Busqueda-Secuencial-1.pdf">Secuencial</a></li>
+                </ul>
+                <br>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -179,7 +173,41 @@
         </div>
       </div>
     </footer>
+    <div id="overlay" class="overlay">
+      <div id="modal" class="modal">
+        <div id="xbtn" class="xbtn">X</div>
+        <div class="cadenasInModal">
+          <strong class="modalTitle" >CADENAS DE CARACTERES</strong>
+          <div class="contentInModal">
+            Son arreglos o vectores con la particularidad de guardar caracteres en sus espacios de memoria, como lo son numeros y letras.
+            <br/>
+            Estos caracteres se pueden declarar de la siguiene informacion
+
+            char array[] = {'a','e','i','o','u'}; o tambien char array[] = {aeiou};
+
+            para imprimir se hace con %s si es una cadena o %c si es una cadena con un solo caracater
+
+            <br/>
+            En el lenguaje C existen ciertas funciones que facilitan el control de la cadenas de texto estas son:
+            <strong>string.h</strong>
+            <br/>
+            <ul class="listaModal">
+              <li class="itemModal ">gets(var) guarda el valor en la depuracion</li>
+              <li class="itemModal ">strlen(var) retorna el numero de caracteres de la cadena</li>
+              <li class="itemModal ">strrev(var) retorna la cadena en sentido contrario</li>
+              <li class="itemModal ">strcpy(var,var2) copia la cadena dos en la cadena 1</li>
+              <li class="itemModal ">strcmp(var, var2) compara dos cadenas si es 0 son iguales</li> <!-- 0  son iguales -->
+              <li class="itemModal ">strupr(var) retorna la cadena en mayuscuka</li>
+              <li class="itemModal ">strlwr(var) retorna la cadena en minuscula</li>
+              <li class="itemModal ">atoi(var) convierte la cadena de caracteres es digitos</li>
+              <li class="itemModal ">atof(var)  convierte la cadena de caracteres es digitos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
     <script src="../scripts/events.js"></script>
+    <script src="../scripts/modales.js"></script>
   </body>
 </html>

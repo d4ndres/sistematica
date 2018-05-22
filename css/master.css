@@ -436,17 +436,17 @@ programacion  I*/
   font-size: 1.4rem;
   color: #19223F;
 }
-.column1,.column2,.column3{
+.column1,.column2{
   display: inline-block;
   position: relative;
   font-weight: 400;
 }
-.column1, .column3{
+.column1{
   width: 24.5%;
 
 }
 .mainContent{
-  width: 50%;
+  width: 75%;
 }
 .content{
   position: absolute;
@@ -485,17 +485,7 @@ programacion  I*/
 .miniNav2{
   top: 60px;
 }
-.column3Title{
-  padding-left: 15px;
-  position: absolute;
-  top: 0;
-}
-.column3SubTitle{
-  padding-left: 25px;
-  position: absolute;
-  top: 25px;
 
-}
 .miniItem2{
   border: 1px solid black;
   margin: 5px 0;
@@ -543,7 +533,7 @@ programacion  I*/
 .rowsContent{
   margin-bottom: 50px;
 }
-.row1RowConten{
+.row1RowConten, .row2RowConten{
   margin-bottom: 10px;
   margin-top: 20px;
   font-size: 16px;
@@ -568,23 +558,6 @@ programacion  I*/
 .priority::before{
   color: red;
 }
-/* +++++++++++++++++++++++++++++++ */
-.imgGuiaContainer{
-  display: block;
-  border: 1px solid #000;
-  max-width: 90%;
-}
-.imgGuia{
-  max-width: 100%;
-}
-
-/* enlace c++ https://mega.nz/#!cIBDRCTS!83Kg0i_QxXA65Z9bXSO6WlBKKJqGvxVP0nbEfs1VqF4 */
-/* top atom bg #B2E299 */
-/* bottom atom bg #00A070 */
- /* color sublime bg #4B4B4B */
-
-/*++++++++++++++++  */
-
 @media screen and (max-width: 1370px){
 
   .containerMainTitle {
@@ -613,23 +586,12 @@ programacion  I*/
   .mainContent{
     width: 75%;
   }
-  .column3{
-    left: 0;
-  }
+
   .miniList2{
     padding: 0;
   }
 
 }
-/* .column1,.column2,.column3{
-  display: inline-block;
-  position: relative;
-  font-weight: 400;
-}
-.column1, .column3{
-  width: 24.5%;
-
-} */
 @media screen and (max-width: 1024px){
 
 

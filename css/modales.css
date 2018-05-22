@@ -1,0 +1,78 @@
+.linkModal{
+  color: #90BA47;
+  cursor: pointer;
+}
+.containerHeader{
+  /* z-index: 0; */
+}
+.overlay{
+  position: fixed;
+  bottom: 0; top: 0; right: 0; left: 0;
+  background: rgba( 0, 0, 0, .8);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  transition: .8s;
+  will-change: opacity;
+
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+.modal{
+  padding: 30px 40px;
+  position: relative;
+  width: 50%;
+
+  background: white;
+  border-radius: 1px solid #000;
+  will-change: transform;
+}
+.xbtn{
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  font-size: 1.4em;
+  border-radius: 50%;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xbtn:hover{
+  background: #000;
+  color: #fff;
+}
+.cadenasInModal{
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.modalTitle{
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.contentInModal{
+  padding: 0 20PX;
+}
+.listaModal{
+
+}
+.itemModal{
+
+}

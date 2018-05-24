@@ -2,7 +2,6 @@ const doScroll = document.documentElement
 const containerHeader = document.getElementById("containerHeader")
 const linkMaker = document.getElementById("linkMaker")
 const miniNav1 = document.getElementById("miniNav1")
-const column3 = document.getElementById("column3")
 const mediaMinLap = window.matchMedia("(max-width: 1230px)")
 const SrBody = document.body
 let mayor = 0
@@ -50,7 +49,5 @@ function activadorMediaMinLap(){
   if(mediaMinLap.matches){
     let gg = miniNav1.offsetHeight
     column3.style.top = gg + "px"
-  }else{
-    column3.style.top = 0;
   }
 }

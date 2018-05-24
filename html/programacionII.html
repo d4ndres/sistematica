@@ -128,10 +128,11 @@
                   <strong id="temas" class="rowContentTitle" >Temas</strong>
                   <ul class="rowContentList">
                     <li class="rowContentItem ">Arreglos o vectores</li>
-                    <li class="rowContentItem ">Arreglos bidimensionales o matrices</li>
                     <li class="rowContentItem ">Métodos de ordenamiento</li>
                     <li class="rowContentItem ">Métodos de búsqueda</li>
                     <li class="rowContentItem ">Cadenas <span id="activadorModalCadenas" class="linkModal">ver</span></li>
+                    <li class="rowContentItem ">Arreglos en paralelo <span id="activadorModalParalelo" class="linkModal">ver</span></li></li>
+                    <li class="rowContentItem ">Arreglos bidimensionales o matrices <span id="activadorModalMatriz" class="linkModal">ver</span></li></li>
                     <li class="rowContentItem ">Estructuras</li>
                   </ul>
                   <br>
@@ -150,6 +151,7 @@
                   <li class="rowContentItem ">método de ordenamiento: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Ordenamiento-Insercion-1.pdf">Inserción</a></li>
                   <li class="rowContentItem ">método de búsqueda: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/BusquedaBinaria.pdf">Binaria</a></li>
                   <li class="rowContentItem ">método de búsqueda: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Busqueda-Secuencial-1.pdf">Secuencial</a></li>
+                  <li class="rowContentItem ">vector en paralelo: <a target="_blank" href="https://sistematicas.000webhostapp.com/wp-content/uploads/2017/11/Paralelos-Ordenados.pdf">paralelo ordenados</a></li>
                 </ul>
                 <br>
               </div>
@@ -176,32 +178,203 @@
     <div id="overlay" class="overlay">
       <div id="modal" class="modal">
         <div id="xbtn" class="xbtn">X</div>
-        <div class="cadenasInModal">
+        <div id="containerCadenas" class="cadenasInModal inModal">
           <strong class="modalTitle" >CADENAS DE CARACTERES</strong>
           <div class="contentInModal">
             Son arreglos o vectores con la particularidad de guardar caracteres en sus espacios de memoria, como lo son numeros y letras.
             <br/>
-            Estos caracteres se pueden declarar de la siguiene informacion
-
-            char array[] = {'a','e','i','o','u'}; o tambien char array[] = {aeiou};
-
-            para imprimir se hace con %s si es una cadena o %c si es una cadena con un solo caracater
-
+            <br/>
+            Estas cadenas de caracteres se pueden declarar de las siguienes formas:
+            <br/>
+            <span class="azulRey">char</span> array<span class="red">[]</span>=<span>{'a','e','i','o','u'};</span>
+            <br/>
+            <span class="azulRey">char</span> array<span class="red">[]</span>=<span>{aeiou};</span>
+            <br/>
+            <br/>
+            Al momento de imprimir la  variable "array" esta mostrara como resultado <strong>aeiou</strong>
+            <br/>
+            Para imprimir una cadena de caracteres lo haremos de la siguiente manera:
+            <br/>
+            Si el numero de espacios de memoria es mayor a uno se usara => <span class="azulRey">printf</span>("%s", array);
+            <br/>
+            Si el numero de espacios de memoria es igual a uno se usara => <span class="azulRey">printf</span>("%c", array);
+            <br/>
+            <br/>
             <br/>
             En el lenguaje C existen ciertas funciones que facilitan el control de la cadenas de texto estas son:
-            <strong>string.h</strong>
+            <br/>
             <br/>
             <ul class="listaModal">
-              <li class="itemModal ">gets(var) guarda el valor en la depuracion</li>
-              <li class="itemModal ">strlen(var) retorna el numero de caracteres de la cadena</li>
-              <li class="itemModal ">strrev(var) retorna la cadena en sentido contrario</li>
-              <li class="itemModal ">strcpy(var,var2) copia la cadena dos en la cadena 1</li>
-              <li class="itemModal ">strcmp(var, var2) compara dos cadenas si es 0 son iguales</li> <!-- 0  son iguales -->
-              <li class="itemModal ">strupr(var) retorna la cadena en mayuscuka</li>
-              <li class="itemModal ">strlwr(var) retorna la cadena en minuscula</li>
-              <li class="itemModal ">atoi(var) convierte la cadena de caracteres es digitos</li>
-              <li class="itemModal ">atof(var)  convierte la cadena de caracteres es digitos</li>
+              <li class="itemModal ">gets(var)</li>
+              <li class="itemModal ">strlen(var)</li>
+              <li class="itemModal ">strrev(var)</li>
+              <li class="itemModal ">strcpy(var,var2)</li>
+              <li class="itemModal ">strcmp(var, var2)</li> <!-- 0  son iguales -->
+              <li class="itemModal ">strupr(var)</li>
+              <li class="itemModal ">strlwr(var)</li>
+              <li class="itemModal ">atoi(var)</li>
+              <li class="itemModal ">atof(var)</li>
             </ul>
+            <br/>
+            para poder utilizar las  anteriores funciones necesitamos la libreria:
+            <strong>string.h</strong>
+            <br/>
+            <br/>
+
+            <strong>gets()</strong>
+            <br/>
+            Con esta funcion podemos almacenar una cadena de caracteres dentro de una variable mientras estamos ejecutando el programa
+            <br/>
+            gets<span class="red">(</span>array<span class="red">)</span>;
+            <br/>
+            <br/>
+
+            <strong>strlen()</strong>
+            <br/>
+            Esta funcion retorna el numero de espacios de memoria almacenados por el array
+            <br/>
+            5 = strlen<span class="red">(</span>array<span class="red">)</span>;
+            <br/>
+            <br/>
+
+            <strong>strrev()</strong>
+            <br/>
+            Esta funcion invierte el array ingresado
+            <br/>
+            strrev<span class="red">(</span>array<span class="red">)</span>; <span class="gray">// => {uoiea}  </span>
+            <br/>
+            <br/>
+
+            <strong>strcpy(,)</strong>
+            <br/>
+            Esta funcion copia el segundo parametro en el primero parametro.
+            <br/>
+            strcpy<span class="red">(</span>array<span class="red">,</span>array2<span class="red">)</span>;<span class="gray">// => {}  </span>
+            <br/>
+            como el segundo parametro está vacio el primero tambien quedara vacio.
+            <br/>
+            <br/>
+
+            <strong>strcmp(,)</strong>
+            <br/>
+            Esta funcion compara dos cadenas de caracteres, si estas son identicas retornaran el valor de 0 pero si estas son diferentes retornaran el valor de 1.
+            <br/>
+            1 = strcmp<span class="red">(</span>array<span class="red">,</span>array2<span class="red">)</span>;
+            <br/>
+            <br/>
+
+            <strong>strupr() y strlwr()</strong>
+            <br/>
+            Estas funciones convierten una cadena de caracteres a mayusculas o minusculas.
+            <br/>
+            strupr<span class="red">(</span>array<span class="red">)</span>;  <span class="gray">// => {AEIOU}  </span>
+            <br/>
+            strlwr<span class="red">(</span>array<span class="red">)</span>;  <span class="gray">// => {aeiou}  </span>
+            <br/>
+            <br/>
+
+            <strong>atoi() y atof()</strong>
+            <br/>
+            Estas funciones retornan un valor entero o un valor flotante, las cadenas de caracteres deben ser numericas
+            <br/>
+            12 = atoi<span class="red">(</span>arrayNumerico<span class="red">)</span>;
+            <br/>
+            15.24 = atof<span class="red">(</span>arrayNumerico<span class="red">)</span>;
+            <br/>
+            <br/>
+
+          </div>
+        </div>
+        <div id="containerParalelo" class="paraleloInModal inModal">
+          <strong class="modalTitle" >ARREGLOS EN PARALELO</strong>
+          <div class="contentInModal">
+            Es una relación entre las componentes de igual subindice (la misma posición) de dos o n vectores.
+            Estos vectores permiten guardar información de manera más ordenada, por lo tanto el usuario pordra entenderla de manera mas rapida.
+            <br/>
+            <br/>
+            <b>Ejemplo</b>
+            <br/>
+            En cuatro vectores se encuentra la informacion de cinco personas,en <b>v1</b> se encuentra el nombre de las personas,
+            en <b>v2</b> se encuentra su edad, en <b>v3</b> se encuentra su genero de sexo y en <b>v4</b> se encuentras su ocupación.
+            <br/>
+            <br/>
+            <div class="centradoFlex">
+              <table class="tablaParalelo">
+                <tbody>
+                  <tr><td>V1</td><td>Alejandro</td><td>Maria</td><td>Andres</td><td>Lucia</td><td>Camila</td></tr>
+                  <tr><td>V2</td><td>12</td><td>14</td><td>43</td><td>28</td><td>18</td></tr>
+                  <tr><td>V3</td><td>M</td><td>F</td><td>M</td><td>F</td><td>F</td></tr>
+                  <tr><td>V4</td><td>estudiante</td><td>estudiante</td><td>empresario</td><td>estudiante</td><td>estudiante</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <br/>
+            <br/>
+            Ahora al tener esta informacion, podemos ordenarla aun más, ya sea por oden de edad, por orden alfabetico
+            de nombres o de ocupación, etc.
+            <br/>
+            Si modificamos un poco un algoritmo de ordenamiento y nos enfocamos en ordenar el vector de edades,
+            los otros vectores tendran que
+            realizar el mismo ordenamiento implícitamente.
+            <br/>
+            <br/>
+            <div class="centradoFlex">
+              <table class="tablaParalelo">
+                <tbody>
+                  <tr><td>V1</td><td>Alejandro</td><td>Maria</td><td>Camila</td><td>Lucia</td><td>Andres</td></tr>
+                  <tr><td>V2</td><td>12</td><td>14</td><td><span class="red">18</span></td><td>28</td><td><span class="red">43</span></td></tr>
+                  <tr><td>V3</td><td>M</td><td>F</td><td>F</td><td>F</td><td>M</td></tr>
+                  <tr><td>V4</td><td>estudiante</td><td>estudiante</td><td>estudiante</td><td>estudiante</td><td>empresario</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <br/>
+          </div>
+        </div>
+        <div id="containerMatriz" class="matrizInModal inModal">
+          <strong class="modalTitle" >ARREGLOS BIDIMENSIONALES/ MATRICES</strong>
+          <div class="contentInModal">
+            Un arreglo bidimensional es aquel que tiene <b>m</b> * <b>n</b> posiciones de memoria, en otras palabras
+            es una tabla de datos.
+            <br/>
+            Donde a <b>m</b> se le podria definir como numero de filas y a <b>n</b> como numero de columnas
+            <br/>
+            <br/>
+            <strong>Comó declarar una matriz</strong>
+            <br/>
+            Sede clara con el siguiente orden:
+            <br/>
+            <span class="azulRey">tipo de dato</span> nombre<span class="red">[</span>m<span class="red">]</span><span class="red">[</span>n<span class="red">]</span>;
+            <br/>
+            Para indecar una posicion de memoria primero indicamos el numero de fila y despues su numero de columna.
+            <br/>
+            <br/>
+            <div class="centradoFlex">
+              <table>
+                <tbody>
+                  <tr><td>(1,1)</td><td>(1,2)</td><td>(1,3)</td><td>(1,n-1)</td><td>(1,n)</td></tr>
+                  <tr><td>(2,1)</td><td>(2,2)</td><td>(2,3)</td><td>(2,n-1)</td><td>(2,n)</td></tr>
+                  <tr><td>(m-1,1)</td><td>(m-1,2)</td><td>(m-1,3)</td><td>(m-1,n-1)</td><td>(m-1,n)</td></tr>
+                  <tr><td>(m,1)</td><td>(m,2)</td><td>(m,3)</td><td>(m,n-1)</td><td>(m,n)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <br/>
+            <br/>
+            <strong>Ejemplo</strong>
+            <br/>
+            <span class="azulRey">int</span> matriz<span class="red">[</span>3<span class="red">]</span><span class="red">[</span>2<span class="red">]</span> = <span class="red">{</span> {9,7} , {1,2} , {5,6} <span class="red">}</span>
+            <br/>
+            <br/>
+            <div class="centradoFlex">
+              <table>
+                <tbody>
+                  <tr><td>9</td><td>7</td></tr>
+                  <tr><td>1</td><td>2</td></tr>
+                  <tr><td>5</td><td>5</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
